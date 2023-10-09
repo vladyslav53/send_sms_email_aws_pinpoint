@@ -13,9 +13,7 @@ Inputs (replace in code):
 */
 // snippet-start:[pinpoint.JavaScript.createclientv3]
 import { PinpointClient } from "@aws-sdk/client-pinpoint";
-// Set the AWS Region.
-const REGION = "us-east-1";
 //Set the MediaConvert Service Object
-const pinClient = new PinpointClient({ region: REGION });
+const pinClient = new PinpointClient({ region: process.env.AWS_REGION });
 export { pinClient };
 // snippet-end:[pinpoint.JavaScript.createclientv3]
