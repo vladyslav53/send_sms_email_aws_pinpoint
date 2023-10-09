@@ -65,7 +65,7 @@ const sendTxSMS = async (
         const data = await pinClient.send(new SendMessagesCommand(params));
         console.log(
             "Message sent! " +
-                data["MessageResponse"]["Result"][destinationNumber][
+                data["MessageResponse"]["Result"][toNumber][
                     "StatusMessage"
                 ]
         );
